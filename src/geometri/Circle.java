@@ -3,11 +3,19 @@ package geometri;
 import java.awt.*;
 
 /**
- * Created by Mattias on 11/15/2016.
+ * A circle.
+ * @author NaN and K
  */
 public class Circle extends GeometricalObject {
     private int diameter;
 
+    /**
+     *
+     * @param x The x-coordinate of the rectangle encapsulating the circle.
+     * @param y The x-coordinate of the rectangle encapsulating the circle.
+     * @param diameter The diameter of the circle.
+     * @param c The color of the circle.
+     */
     public Circle(int x, int y, int diameter, Color c) {
         this.x = x;
         this.y = y;
@@ -15,6 +23,12 @@ public class Circle extends GeometricalObject {
         this.c = c;
     }
 
+    /**
+     *
+     * @param f Another shape whose coordinates will be copied.
+     * @param diameter The diameter of the circle.
+     * @param c The color of the circle.
+     */
     public Circle(GeometricalForm f, int diameter, Color c) {
         this.x = f.getX();
         this.y = f.getY();

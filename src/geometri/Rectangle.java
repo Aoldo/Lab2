@@ -3,21 +3,35 @@ package geometri;
 import java.awt.*;
 
 /**
- * Created by Mattias on 11/15/2016.
+ * A rectangle.
+ *
+ * @author NaN and K
  */
 public class Rectangle extends GeometricalObject {
     private int width, height;
 
-    public Rectangle(int x, int y, int width, int height, Color c)
-    {
+    /**
+     * @param x      x-coordinate of the rectangle.
+     * @param y      y-coordinate of the rectangle.
+     * @param width  Width of the rectangle.
+     * @param height Height of the rectangle.
+     * @param c      Color of the rectangle.
+     */
+    public Rectangle(int x, int y, int width, int height, Color c) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
         this.c = c;
     }
-    public Rectangle(GeometricalForm f, int width, int height, Color c)
-    {
+
+    /**
+     * @param f      The shape whose position will be copied.
+     * @param width  Width of the rectangle.
+     * @param height Height of the rectangle.
+     * @param c      Color of the rectangle.
+     */
+    public Rectangle(GeometricalForm f, int width, int height, Color c) {
         x = f.getX();
         y = f.getY();
         this.width = width;

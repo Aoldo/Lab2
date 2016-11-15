@@ -107,7 +107,7 @@ public interface GeometricalForm
      *
      * @param dx move the form dx points to the right.
      * @param dy move the form dy points down.
-     * @throws IllegalPositionException if any coordinate becomes negative.
+     * @throws IllegalPositionException if any position is negative.
      */
     public void move( int dx, int dy )
             throws IllegalPositionException;
@@ -130,7 +130,7 @@ public interface GeometricalForm
      *
      * @param x Distance right from origo.
      * @param y Distance down from origo.
-     * @throws <tt>IllegalPositionException</tt> if any coordinate is negative.
+     * @throws IllegalPositionException if any position is negative.
      */
     public void place( int x, int y )
             throws IllegalPositionException;

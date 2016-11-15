@@ -3,7 +3,9 @@ package geometri;
 import java.awt.*;
 
 /**
- * Created by Mattias on 11/15/2016.
+ * Object containing the poisition and color of the geometrical shapes, aswell as
+ * methods that aren't unique between each subtype.
+ * @author NaN and K
  */
 public abstract class GeometricalObject implements GeometricalForm {
     protected int x, y;
