@@ -6,15 +6,23 @@ import java.awt.*;
  * Created by Mattias on 11/15/2016.
  */
 public class Point extends GeometricalObject {
-    public int getPerimiter() {
+    public Point(int x, int y, Color c)
+    {
+        this.x = x;
+        this.y = y;
+        this.c = c;
+    }
+    public Point(GeometricalForm f, Color c)
+    {
+        x = f.getX();
+        y = f.getY();
+        this.c = c;
+    }
+    public int getPerimeter() {
         return 0;
     }
 
     public int getArea() {
-        return 0;
-    }
-
-    public int getPerimeter() {
         return 0;
     }
 

@@ -8,6 +8,20 @@ import java.awt.*;
 public class Square extends GeometricalObject {
     private int side;
 
+    public Square(int x, int y, int side, Color c) {
+        this.x = x;
+        this.y = y;
+        this.c = c;
+        this.side = side;
+    }
+
+    public Square(GeometricalForm f, int side, Color c) {
+        x = f.getX();
+        y = f.getY();
+        this.side = side;
+        this.c = c;
+    }
+
     @Override
     public int getPerimeter() {
         return side * 4;
@@ -28,9 +42,9 @@ public class Square extends GeometricalObject {
     public int getWidth() {
         return side;
     }
+
     @Override
-    public int getArea()
-    {
-        return side*side;
+    public int getArea() {
+        return side * side;
     }
 }

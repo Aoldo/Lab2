@@ -8,6 +8,20 @@ import java.awt.*;
 public class Circle extends GeometricalObject {
     private int diameter;
 
+    public Circle(int x, int y, int diameter, Color c) {
+        this.x = x;
+        this.y = y;
+        this.diameter = diameter;
+        this.c = c;
+    }
+
+    public Circle(GeometricalForm f, int diameter, Color c) {
+        this.x = f.getX();
+        this.y = f.getY();
+        this.diameter = diameter;
+        this.c = c;
+    }
+
     public int getPerimeter() {
         return (int) (Math.PI * diameter);
     }
