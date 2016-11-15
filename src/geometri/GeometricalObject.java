@@ -16,6 +16,21 @@ public abstract class GeometricalObject implements GeometricalForm {
         this.y += dy;
     }
 
+    public int compareTo(GeometricalForm otherForm) {
+        if (otherForm.getArea() < this.getArea())
+            return -1;
+        else if (otherForm.getArea() > this.getArea())
+            return 1;
+        else
+        {
+            if(otherForm.getPerimeter() < this.getPerimeter())
+                return -1;
+            else if(otherForm.getPerimeter() > this.getPerimeter())
+                return 1;
+        }
+        return 0;
+    }
+
     public void place(int x, int y) throws IllegalPositionException {
         if (x < 0 || y < 0)
             throw new IllegalPositionException();

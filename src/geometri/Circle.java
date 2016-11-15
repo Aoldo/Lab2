@@ -16,9 +16,6 @@ public class Circle extends GeometricalObject {
         return diameter;
     }
 
-    public int compareTo(GeometricalForm otherForm) {
-
-    }
 
     public int getHeight() {
         return diameter;
