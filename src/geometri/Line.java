@@ -41,6 +41,34 @@ public class Line extends GeometricalObject {
             y = y2;
     }
 
+    @Override
+    public void place(int x, int y) throws IllegalPositionException {
+        if (x < 0 || y < 0)
+            throw new IllegalPositionException();
+
+        int dx = x - this.x;
+        int dy = y - this.y;
+        x1 += dx;
+        x2 += dx;
+        y1 += dy;
+        y2 += dy;
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    public void move(int dx, int dy) throws IllegalPositionException {
+        if (this.x + dx < 0 || this.y + dy < 0)
+            throw new IllegalPositionException();
+
+        x1 += dx;
+        x2 += dx;
+        y1 += dy;
+        y2 += dy;
+        this.x += dx;
+        this.y += dy;
+    }
+
     public int getPerimeter() {
         return (int) Math.sqrt(getWidth() * getWidth() + getHeight() + getHeight());
     }
