@@ -9,13 +9,12 @@ public class Circle extends GeometricalObject {
     private int diameter;
 
     public int getPerimeter() {
-        return (int)(Math.PI*diameter);
+        return (int) (Math.PI * diameter);
     }
 
     public int getWidth() {
         return diameter;
     }
-
 
     public int getHeight() {
         return diameter;
@@ -24,8 +23,9 @@ public class Circle extends GeometricalObject {
     public int getArea() {
         return (int) ((Math.PI) * (diameter / 2) * (diameter / 2));
     }
-    public void fill(Graphics g)
-    {
 
+    public void fill(Graphics g) {
+        g.setColor(c);
+        g.fillOval(x, y, diameter, diameter);
     }
 }

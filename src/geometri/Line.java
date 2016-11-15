@@ -20,16 +20,13 @@ public class Line extends GeometricalObject {
         return y2 - y1;
     }
 
-    public int compareTo(GeometricalForm otherForm) {
-
-    }
-
 
     public int getArea() {
         return 0;
     }
 
     public void fill(Graphics g) {
-
+        g.setColor(c);
+        g.drawLine(x1, y1, x2, y2);
     }
 }
